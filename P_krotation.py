@@ -6,5 +6,16 @@ In a circular rotation, elements that are moved from the end of the array are ap
 Example for array [1, 2, 3, 4, 5] and K = 2:
 After rotating the array by 2 positions, the result will be [4, 5, 1, 2, 3].
 '''
+def roateit(mylist):
+    new_list=[0 for _ in range(len(mylist))]
+    for i in range(len(mylist)):
+        j=i+2
+        new_list[j%len(mylist)]=mylist[i]
+
+    print(new_list)
+
+
+roateit([1, 2, 3, 4, 5])
+
 
 
